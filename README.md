@@ -1,44 +1,87 @@
-# 🐍 Code-Python
+# 🐍 Code Python Lab
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Version">
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
-</p>
+Repositório de estudos e exercícios em **Python**, com foco em lógica de programação, algoritmos e boas práticas de desenvolvimento.
 
-Welcome to my **Code-Python** repository! This space is dedicated to storing my Python scripts, algorithmic exercises, academic challenges from UNESC, and automation projects as I advance in Software Engineering.
+O projeto atual implementa um validador educacional de números de cartão baseado no **Algoritmo de Luhn**, inspirado no exercício Credit do CS50.
 
----
+> **Escopo:** a validação é apenas matemática e de formato. O projeto não consulta bancos, emissores ou redes de pagamento e não deve ser usado para validar cartões reais em produção.
 
-## 📂 Repository Structure
+## Objetivos
 
-The repository is organized into logical directories to maintain clean and readable code:
+- Praticar lógica de programação com Python.
+- Implementar e compreender o Algoritmo de Luhn.
+- Trabalhar com funções, validação de entrada e expressões regulares.
+- Escrever código legível e modular.
+- Criar testes automatizados.
+- Utilizar integração contínua com GitHub Actions.
+
+## Funcionalidades
+
+O validador:
+
+- aceita números digitados com espaços ou hífens como separadores;
+- rejeita caracteres não permitidos;
+- aplica o Algoritmo de Luhn;
+- identifica exemplos compatíveis com AMEX, Mastercard e Visa dentro das regras implementadas;
+- informa quando o número passa no Luhn, mas não corresponde às bandeiras tratadas pelo exercício.
+
+## Estrutura
 
 ```text
-Code-Python/
-│
-├── algorithms/         # Logic exercises, data structures, and problem-solving scripts
-├── automation/         # Automation scripts and productivity tools
-├── university/         # Practical assignments and projects developed for UNESC classes
-└── projects/           # Mini-applications and standalone Python projects
-🚀 Technologies & Concepts Applied
-Language: Python 3
+code-python/
+├── .github/
+│   └── workflows/
+│       └── tests.yml
+├── tests/
+│   └── test_cs50_credit.py
+├── .gitignore
+├── LICENSE
+├── README.md
+└── cs50_credit.py
+```
 
-Concepts: Object-Oriented Programming (OOP), Data Structures, Algorithms, File Handling, and API Integration.
+## Tecnologias
 
-Best Practices: Clean Code principles, descriptive variable naming, and modular code architecture.
+- Python 3.12+
+- Biblioteca padrão do Python
+- unittest
+- GitHub Actions
 
-📦 How to Run the Code
-If you want to clone this repository and run any of the scripts locally, follow these steps:
-git clone [https://github.com/marcellabongiolo/Code-Python.git](https://github.com/marcellabongiolo/Code-Python.git)
-cd Code-Python
-python path/to/script.py
-💡 About Me
-I am Marcella Bongiolo, a Software Engineering student at UNESC. This repository reflects my continuous learning journey, problem-solving skills, and passion for software development.
+## Como executar
 
-🤝 Connect with Me
-GitHub: github.com/marcellabongiolo
+Clone o repositório:
 
-LinkedIn: linkedin.com/in/marcellabongiolo
+```bash
+git clone https://github.com/marcellabongiolo/code-python.git
+cd code-python
+```
 
-Email: marcellabongioloemili@gmail.com
+Execute o programa:
+
+```bash
+python cs50_credit.py
+```
+
+Execute os testes:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Conceitos praticados
+
+- Algoritmo de Luhn
+- Validação e normalização de entrada
+- Expressões regulares
+- Funções e type hints
+- Estruturas de repetição
+- Testes automatizados
+- Integração contínua (CI)
+
+## Próximos passos
+
+O repositório pode receber novos exercícios e pequenos projetos de Python à medida que o laboratório evolui, mantendo cada exemplo acompanhado de documentação e testes quando fizer sentido.
+
+## Licença
+
+Este projeto está disponível sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE).
